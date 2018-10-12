@@ -1,0 +1,25 @@
+/* Paynter/Sookolsky
+   Benin Flag
+*/
+
+void setup() {     //setup canvas
+  size(300,200);
+  noStroke();
+}
+
+void draw() {             //draw hidden message
+  if (mousePressed) {
+    if (mouseX < width/3) {
+      fill(52,169,59);                         //green
+      ellipse(mouseX, mouseY, 20, 20);
+    } else if (mouseX > width/3) {
+        if (mouseY < height/2) {
+          fill(229,217,55);                     //yellow
+          ellipse(mouseX, mouseY, 20, 20);
+        } else if (mouseY > height/2) {
+          fill(255,0,0);                     //red
+          ellipse(mouseX, mouseY, 20, 20);
+        }
+    }
+  }
+}
